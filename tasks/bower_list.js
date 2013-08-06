@@ -8,6 +8,8 @@
 
 'use strict';
 
+var bower = require('bower');
+
 module.exports = function(grunt) {
 
   // Please see the Grunt documentation for more information regarding task
@@ -16,9 +18,25 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('bower_install', 'Install bower dependencies', function() {
     var done = this.async();
     
-    var options = this.options({});
+    var options = this.options({
+      paths: false,
+      offline: false,
+      config: {},
+      done: null
+    });
     
-    bower.commands.install();
+    var smallOptions = {
+      paths: options.paths,
+      offline: options.offline
+    };
+    
+    bower.commands.list(smallOptions, options.config).on('end', function() {
+      if (typeof options.done === 'function') {
+        options.done.apply(this, arguments);
+      }
+      
+      done();
+    });
   });
 
 };
