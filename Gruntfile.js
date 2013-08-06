@@ -64,6 +64,14 @@ module.exports = function(grunt) {
        }
      }
    },
+   bower_list: {
+     list: {
+       options: {
+         paths: true,
+         done: console.log
+       }
+     }
+   },
 
     // Unit tests.
     nodeunit: {
