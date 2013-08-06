@@ -1,0 +1,46 @@
+{
+  "name": "grunt-bower-commands",
+  "description": "Grunt tasks for bower commands",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Stoney-FD/grunt-bower-commands",
+  "author": {
+    "name": "Johannes Stein",
+    "email": "johannesstein@freeze-dev.com",
+    "url": "http://www.freeze-dev.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Stoney-FD/grunt-bower-commands.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Stoney-FD/grunt-bower-commands/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Stoney-FD/grunt-bower-commands/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "dependencies": {
+    "bower": "~1.1.0"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
