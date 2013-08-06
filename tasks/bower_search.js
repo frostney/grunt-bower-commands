@@ -13,15 +13,16 @@ module.exports = function(grunt) {
   // Please see the Grunt documentation for more information regarding task
   // creation: http://gruntjs.com/creating-tasks
 
-  grunt.registerMultiTask('bower_search', 'Searches for a package ', function() {
+  grunt.registerMultiTask('bower_search', 'Searches for packages', function() {
     var done = this.async();
 
     var options = this.options({
       done: null,
-      name: null
+      name: null,
+      config: {}
     });
     
-    bower.commands.search(options.name).on('end', function() {
+    bower.commands.search(options.name, options.config).on('end', function() {
       if (typeof options.done === 'function') {
         options.done.apply(this, arguments);
       }
