@@ -56,6 +56,14 @@ module.exports = function(grunt) {
        }
      }
    },
+   bower_install: {
+     jquery: {
+       options: {
+       endpoints: 'jquery',
+       done: function() { console.log('Its here.'); }
+       }
+     }
+   },
 
     // Unit tests.
     nodeunit: {
